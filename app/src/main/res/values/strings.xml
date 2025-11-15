@@ -5,4 +5,7 @@
     <string name="op_mi_tienda_v">Mi tienda</string>
     <string name="op_resenia_v">Reseñas</string>
     <string name="op_cerrar_sesion_v">Cerrar sesión</string>
+
+    <string name="op_mis_productos_v">Mis productos</string>
+    <string name="op_mis_ordenes_v">Órdenes</string>
 </resources>
