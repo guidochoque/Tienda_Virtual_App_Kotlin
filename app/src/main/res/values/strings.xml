@@ -8,4 +8,6 @@
 
     <string name="op_mis_productos_v">Mis productos</string>
     <string name="op_mis_ordenes_v">Órdenes</string>
+
+    <string name="txt_bienvenida">Bienvenido(a)</string>
 </resources>
