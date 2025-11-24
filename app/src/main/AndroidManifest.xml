@@ -15,9 +15,6 @@
             android:name=".Vendedor.MainActivityVendedor"
             android:exported="false" />
         <activity
-            android:name=".Cliente.MainActivityVendedor"
-            android:exported="false" />
-        <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
