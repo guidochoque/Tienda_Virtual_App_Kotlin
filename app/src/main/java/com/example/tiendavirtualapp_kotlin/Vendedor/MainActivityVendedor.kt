@@ -12,6 +12,7 @@ import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.tiendavirtualapp_kotlin.MainActivity
 import com.example.tiendavirtualapp_kotlin.R
 import com.example.tiendavirtualapp_kotlin.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentMisProductosV
 import com.example.tiendavirtualapp_kotlin.Vendedor.Bottom_Nav_Fragments_Vendedor.FragmentOrdenesV
@@ -57,24 +58,30 @@ class MainActivityVendedor : AppCompatActivity() , NavigationView.OnNavigationIt
         
     }
 
-    private fun comprobarSesion() {
-        /*Si el usuario no ha iniciado sesión*/
+    private fun cerrarSesion(){
+        firebaseAuth!!.signOut()
+        startActivity(Intent(applicationContext, LoginVendedorActivity::class.java))
+        finish()
+        Toast.makeText(applicationContext, "Haz cerrado sesión", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun comprobarSesion(){
+        /*Si el usuario no ha iniciado sesión, que lo dirija a OpcionesLogin*/
         if (firebaseAuth!!.currentUser==null){
-            startActivity(Intent(applicationContext, RegistroVendedorActivity::class.java))
-            Toast.makeText(applicationContext, "Vendedor no registrado o no logeado", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(applicationContext, LoginVendedorActivity ::class.java))
         }else{
             Toast.makeText(applicationContext, "Vendedor en línea", Toast.LENGTH_SHORT).show()
         }
     }
 
-    private fun replaceFragment(fragment: Fragment) {
+    private fun replaceFragment(fragment: Fragment){
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.navFragment,fragment)
             .commit()
     }
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+    override fun onNavigationItemSelected(item: MenuItem): Boolean{
         when(item.itemId){
             R.id.op_inicio_v->{
                 replaceFragment(FragmentInicioV())
@@ -86,7 +93,7 @@ class MainActivityVendedor : AppCompatActivity() , NavigationView.OnNavigationIt
                 replaceFragment(FragmentReseniasV())
             }
             R.id.op_cerrar_sesion_v->{
-                Toast.makeText(applicationContext, "Saliste de la aplicación", Toast.LENGTH_SHORT).show()
+                cerrarSesion()
             }
             R.id.op_mis_productos_v->{
                 replaceFragment(FragmentMisProductosV())
