@@ -7,11 +7,9 @@ import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tiendavirtualapp_kotlin.Constantes
-import com.example.tiendavirtualapp_kotlin.MainActivity
 import com.example.tiendavirtualapp_kotlin.databinding.ActivityRegistroVendedorBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import org.intellij.lang.annotations.Pattern
 
 class RegistroVendedorActivity : AppCompatActivity() {
 
