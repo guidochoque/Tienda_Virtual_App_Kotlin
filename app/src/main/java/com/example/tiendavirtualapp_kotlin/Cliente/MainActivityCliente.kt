@@ -7,6 +7,6 @@ import com.example.tiendavirtualapp_kotlin.R
 class MainActivityCliente : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_cliente)
     }
 }
