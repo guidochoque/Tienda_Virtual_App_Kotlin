@@ -44,6 +44,12 @@
     <string name="txtNoCuentaV">¿No tienes una cuenta?</string>
     <string name="tvRegistrarV">Registrarme</string>
 
+    <!--Login de cliente-->
+    <string name="txtloginC">Login de cliente</string>
+    <string name="btnLoginC">Ingresar</string>
+    <string name="txtNoCuentaC">¿No tienes una cuenta?</string>
+    <string name="tvRegistrarC">Registrarme</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
